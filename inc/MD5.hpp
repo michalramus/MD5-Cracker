@@ -63,7 +63,7 @@ private:
     std::string hash; // hash to crack
     std::vector<char> passwd; // current password to check
     std::atomic<bool> lastPasswdReached; // if all passwords are checked
-    const int passwdInThread = 100000; // how many passwords to check by one thread at once
+    const int passwdInThread = 1000000; // how many passwords to check by one thread at once
     std::string foundPasswd = "";
     std::vector<char> lastPasswd; // used by threads to check if reached last password
 
