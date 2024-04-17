@@ -175,7 +175,7 @@ void testSpeed(int passwdLength, std::vector<int> threadCounts)
         auto speed = md5->md5SpeedTest(threadCount, passwdLength);
         speeds.push_back(speed);
 
-        std::this_thread::sleep_for(std::chrono::milliseconds(200)); // wait for all threads to finish
+        std::this_thread::sleep_for(std::chrono::milliseconds(2000)); // wait for all threads to finish
         // md5.~MD5(); // Force compiler to reset MD5 object even in -O3 mode
         delete md5;
         // wait to reduce temperature
