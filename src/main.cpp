@@ -177,7 +177,7 @@ void testSpeed(int passwdLength, std::vector<int> threadCounts)
 
     // print results
     std::cout << "--------------------------------\n";
-    for (int i = 0; i < threadCounts.size(); ++i)
+    for (int i = 0; i < static_cast<int>(threadCounts.size()); ++i)
     {
         if (speeds[i] == 0)
         {

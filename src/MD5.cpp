@@ -244,7 +244,7 @@ void MD5::thread(const int threadId)
             }
 
             passwd[0]++;
-            for (int j = 0; j < passwd.size(); j++)
+            for (int j = 0; j < static_cast<int>(passwd.size()); j++)
             {
                 if (passwd[j] > this->endLetter)
                 {
@@ -273,11 +273,11 @@ std::vector<char> MD5::getPasswd()
     for (int i = 0; i < this->passwdInThread; i++)
     {
         this->passwd[0]++;
-        for (int j = 0; j < this->passwd.size(); j++)
+        for (int j = 0; j < static_cast<int>(this->passwd.size()); j++)
         {
             if (this->passwd[j] > this->endLetter)
             {
-                if (j + 1 == this->passwd.size())
+                if (j + 1 == static_cast<int>(this->passwd.size()))
                 {
                     this->lastPasswdReached = true;
 
