@@ -15,3 +15,11 @@ This is simple brute force multithread MD5 cracker. It can crack MD5 hashes or c
 Software checks performance using 1, 2, 4, 8, 16 and 32 threads. Average speed is measured for 5 minutes.
 
 ```MD5 --test-speeds passwordLength```
+
+## How to build
+
+```bash
+mkdir build
+cmake -B build -S ./ 
+cmake --build build --config Release --target all 
+```
