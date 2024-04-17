@@ -1,7 +1,7 @@
 {
     "cmake.debugConfig": {
         "args": [
-            "6",
+            "5",
             "e86a983440bf85f650f9caafdf670b2d",
             "8",
             "-v"
