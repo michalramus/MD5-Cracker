@@ -171,8 +171,8 @@ void testSpeed(int passwdLength, std::vector<int> threadCounts)
     for (auto &threadCount : threadCounts)
     {
         std::cout << "\nTesting speed for " << threadCount << " threads...\n";
-        MD5 md5;
-        auto speed = md5.md5SpeedTest(threadCount, passwdLength);
+        MD5 *md5 = new MD5;
+        auto speed = md5->md5SpeedTest(threadCount, passwdLength);
         speeds.push_back(speed);
 
         std::this_thread::sleep_for(std::chrono::milliseconds(200)); // wait for all threads to finish
