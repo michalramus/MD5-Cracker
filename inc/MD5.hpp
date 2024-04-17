@@ -31,7 +31,7 @@ public:
      *
      * @param threadCount
      * @param passwdLength
-     * @return int speed in hashes per second measured for 5 minutes
+     * @return int speed in hashes per second measured for 2 minutes
      */
     int md5SpeedTest(const int threadCount, const int passwdLength);
 

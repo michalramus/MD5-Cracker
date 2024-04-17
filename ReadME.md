@@ -12,7 +12,7 @@ This is simple brute force multithread MD5 cracker. It can crack MD5 hashes or c
 
 ### Checking performance
 
-Software checks performance using 1, 2, 4, 8, 16 and 32 threads. Average speed is measured for 5 minutes.
+Software checks performance using 1, 2, 4, 8, 16 and 32 threads. Average speed is measured for 2 minutes. Next, waiting for 2 minutes to cool pc.
 
 ```MD5 --test-speeds passwordLength```
 

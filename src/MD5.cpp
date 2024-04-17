@@ -142,7 +142,7 @@ int MD5::md5SpeedTest(const int threadCount, const int passwdLength)
 {
     unsigned long long int speed = 0;
     const int timeBetweenMeasurements = 200; // in ms
-    const int measurementsCount = 5 * 60 * 1000 / timeBetweenMeasurements; // 5 minutes
+    const int measurementsCount = 2 * 60 * 1000 / timeBetweenMeasurements; // 2 minutes
 
     // set class properties
     terminateThreads = false;
