@@ -18,6 +18,8 @@ Software checks performance using 1, 2, 4, 8, 16 and 32 threads. Average speed i
 
 ## How to build
 
+>Tested with clang and g++ on Linux and MacOS
+
 ```bash
 mkdir build
 cmake -B build -S ./ 
