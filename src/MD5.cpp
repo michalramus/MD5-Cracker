@@ -4,6 +4,7 @@
 #include <iostream>
 #include <iterator>
 #include <vector>
+#include <numeric>
 
 std::string MD5::md5Gen(const std::string &input)
 {
