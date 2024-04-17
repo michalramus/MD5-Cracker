@@ -156,12 +156,13 @@ void crackPassword(const std::string hash, const int threadCount, const int pass
 
 /**
  * @brief Print average speed of cracking MD5 hash for each thread count
- * 
- * @param passwdLength 
- * @param threadCounts 
+ *
+ * @param passwdLength
+ * @param threadCounts
  */
 void testSpeed(int passwdLength, std::vector<int> threadCounts)
 {
+    const int waitTime = 120; // Time to wait between tests
     std::cout << "Testing speeds...\n";
 
     std::vector<int> speeds;
@@ -173,6 +174,16 @@ void testSpeed(int passwdLength, std::vector<int> threadCounts)
         MD5 md5;
         auto speed = md5.md5SpeedTest(threadCount, passwdLength);
         speeds.push_back(speed);
+
+        std::this_thread::sleep_for(std::chrono::milliseconds(200)); // wait for all threads to finish
+        // md5.~MD5(); // Force compiler to reset MD5 object even in -O3 mode
+        delete md5;
+        // wait to reduce temperature
+        if (threadCount != threadCounts[threadCounts.size() - 1])
+        {
+            std::cout << "\nwaiting...\n";
+            std::this_thread::sleep_for(std::chrono::seconds(waitTime));
+        }
     }
 
     // print results
